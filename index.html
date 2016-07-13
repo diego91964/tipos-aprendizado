@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Tipos de Aprendizado</section>
+				<section>Você Sabia que existem 4 tipos principais de aprendizado?</section>
+				<section>
+					<h1> Aprendizado Visual </h1>
+					<section><h4>Costumam falar rápido e interromper outras pessoas</h4></section>
+					<section>
+						<h4>Aprendem ao ver imagens e diagramas</h4>
+						<img src = "img/gif-functions.gif" />
+					</section>
+					<section><h4>Precisam de silêncio quando estudam</h4></section>
+					<section><h4>Imaginam conceitos a partir de imagens</h4></section>
+					<section>
+							<h4>Fazem anotações detalhadas</h4>
+							<h4>*Experimente pressionar C ou B</h4>
+							<h4>*Experimente pressionar D para salvar suas anotações</h4>
+					</section>
+					<section><h4>Gostam de sentar nas primeiras carteiras da sala de aula</h4></section>
+
+				</section>
+				<section>
+					<h1>Aprendizado Auditivo </h1>
+					<section>
+							Aperte o Play
+					</section>
+					<section>
+						<h4>Falam mais lentamente e explicam bem conceitos e teorias</h4>
+						<p class ="fragment" data-audio-src="audio/1-audio.ogg">
+			 				Pressione R para iniciar R para pausar e Z para realizar download da gravação.
+	 					</p>
+					</section>
+					<section data-audio-text="O que acha de ouvir uma explicação em um slide?">
+						Ligue o Microfone
+					</section>
+					<section data-audio-text="Possuem a tendência de serem ouvintes naturais" >
+						<h4>Possuem a tendência de serem ouvintes naturais</h4>
+					</section>
+					<section data-audio-text="Repetem as coisas em voz alta">
+						<h4>Repetem as coisas em voz alta</h4>
+					</section>
+					<section data-audio-text="Pensam de forma linear">
+						<h4>Pensam de forma linear</h4>
+					</section>
+					<section data-audio-text="Leem lentamente">
+						<h4>Leem lentamente</h4>
+					</section>
+					<section data-audio-text="Preferem ouvir, ao invés de ler informações">
+						<h4>Preferem ouvir, ao invés de ler informações</h4>
+					</section>
+				</section>
+				<section>
+					<h1>Aprendizado Sinestésico</h1>
+					<section><h4>Falam mais lentamente</h4></section>
+					<section><h4>Aprendem quando fazem ou resolvem os problemas na prática</h4></section>
+					<section><h4>Gostam de abordagens práticas de ensino</h4></section>
+
+					<section>
+						<h4>Não conseguem ficar parados por muito tempo</h4>
+					</section>
+
+					<section><h4>Fazem intervalos quando estão estudando</h4></section>
+
+
+					<section>
+						  </br></br></br></br>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/mrcNc5UT0BM" frameborder="0" allowfullscreen></iframe>
+							<h4>Veja um vídeo para ficar mais atento :D</h4>
+					</section>
+
+					<section><h4>Sofrem de períodos curtos de falta de atenção</h4></section>
+				</section>
+				<section>
+					<h1>Aprendizado Escrita e Leitura</h1>
+					<h4>Há ainda outro tipo de aprendizagem, ainda não confirmado cientificamente como os três primeiros,
+						mas defendido por muitos pedagogos e próprios alunos. Esse tipo de aluno é aquele que gosta de aprender
+						lendo e escrevendo os conteúdos. </h4>
+
+				</section>
+
+				<section><h1>Obrigado!</h1></section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				chalkboard: {
+			 		// optionally load pre-recorded chalkboard drawing from file
+			 		src: "chalkboard.json",
+	 			},
+
+
+				audio: {
+	        prefix: 'audio/',   // audio files are stored in the "audio" folder
+	        suffix: '.ogg',     // audio files have the ".ogg" ending
+	        textToSpeechURL: 'http://api.voicerss.org/?key=8a95b6fe21e044c484241633f6d6000e&hl=pt-br&c=ogg&src=',  // the URL to the text to speech converter
+	        defaultNotes: false,    // use slide notes as default for the text to speech converter
+	        defaultText: false,     // use slide text as default for the text to speech converter
+	        advance: 0,         // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
+	        autoplay: false,    // automatically start slideshow
+	        defaultDuration: 5, // default duration in seconds if no audio is available
+	        playerOpacity: 0.05,    // opacity value of audio player if unfocused
+	        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+    		},
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },
+        	{ src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+
+				keyboard: {
+        67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+        66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+        46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+         8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+				82: function() { Recorder.toggleRecording(); }, // press 'r' to start/stop recording
+        90: function() { Recorder.downloadZip(); },     // press 'z' to download zip containing audio files
+        84: function() { Recorder.fetchTTS(); }     // press 't' to fetch TTS audio files
+    		}
+			});
+		</script>
+	</body>
+</html>
